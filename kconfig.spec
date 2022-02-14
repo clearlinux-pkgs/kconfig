@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : kconfig
-Version  : 5.90.0
-Release  : 52
-URL      : https://download.kde.org/stable/frameworks/5.90/kconfig-5.90.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.90/kconfig-5.90.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.90/kconfig-5.90.0.tar.xz.sig
+Version  : 5.91.0
+Release  : 53
+URL      : https://download.kde.org/stable/frameworks/5.91/kconfig-5.91.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.91/kconfig-5.91.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.91/kconfig-5.91.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-2-Clause BSD-3-Clause CC0-1.0 GPL-2.0 LGPL-2.0 LGPL-2.1 LGPL-3.0 MIT
@@ -78,15 +78,15 @@ license components for the kconfig package.
 
 
 %prep
-%setup -q -n kconfig-5.90.0
-cd %{_builddir}/kconfig-5.90.0
+%setup -q -n kconfig-5.91.0
+cd %{_builddir}/kconfig-5.91.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641960766
+export SOURCE_DATE_EPOCH=1644797232
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -102,20 +102,20 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1641960766
+export SOURCE_DATE_EPOCH=1644797232
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kconfig
-cp %{_builddir}/kconfig-5.90.0/LICENSES/BSD-2-Clause.txt %{buildroot}/usr/share/package-licenses/kconfig/680ed9349d3d12bd39ddd36e8c4bc6b1b0cb1c0e
-cp %{_builddir}/kconfig-5.90.0/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/kconfig/9950d3fdce1cff1f71212fb5abd31453c6ee2f8c
-cp %{_builddir}/kconfig-5.90.0/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/kconfig/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0
-cp %{_builddir}/kconfig-5.90.0/LICENSES/GPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/kconfig/e712eadfab0d2357c0f50f599ef35ee0d87534cb
-cp %{_builddir}/kconfig-5.90.0/LICENSES/LGPL-2.0-only.txt %{buildroot}/usr/share/package-licenses/kconfig/20079e8f79713dce80ab09774505773c926afa2a
-cp %{_builddir}/kconfig-5.90.0/LICENSES/LGPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/kconfig/20079e8f79713dce80ab09774505773c926afa2a
-cp %{_builddir}/kconfig-5.90.0/LICENSES/LGPL-2.1-only.txt %{buildroot}/usr/share/package-licenses/kconfig/3c3d7573e137d48253731c975ecf90d74cfa9efe
-cp %{_builddir}/kconfig-5.90.0/LICENSES/LGPL-3.0-only.txt %{buildroot}/usr/share/package-licenses/kconfig/757b86330df80f81143d5916b3e92b4bcb1b1890
-cp %{_builddir}/kconfig-5.90.0/LICENSES/LicenseRef-KDE-Accepted-LGPL.txt %{buildroot}/usr/share/package-licenses/kconfig/e458941548e0864907e654fa2e192844ae90fc32
-cp %{_builddir}/kconfig-5.90.0/LICENSES/LicenseRef-KDE-Accepted-LGPL.txt %{buildroot}/usr/share/package-licenses/kconfig/e458941548e0864907e654fa2e192844ae90fc32
-cp %{_builddir}/kconfig-5.90.0/LICENSES/MIT.txt %{buildroot}/usr/share/package-licenses/kconfig/a0193e3fccf86c17dc71e3f6c0ac0b535e06bea3
+cp %{_builddir}/kconfig-5.91.0/LICENSES/BSD-2-Clause.txt %{buildroot}/usr/share/package-licenses/kconfig/680ed9349d3d12bd39ddd36e8c4bc6b1b0cb1c0e
+cp %{_builddir}/kconfig-5.91.0/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/kconfig/9950d3fdce1cff1f71212fb5abd31453c6ee2f8c
+cp %{_builddir}/kconfig-5.91.0/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/kconfig/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0
+cp %{_builddir}/kconfig-5.91.0/LICENSES/GPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/kconfig/e712eadfab0d2357c0f50f599ef35ee0d87534cb
+cp %{_builddir}/kconfig-5.91.0/LICENSES/LGPL-2.0-only.txt %{buildroot}/usr/share/package-licenses/kconfig/20079e8f79713dce80ab09774505773c926afa2a
+cp %{_builddir}/kconfig-5.91.0/LICENSES/LGPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/kconfig/20079e8f79713dce80ab09774505773c926afa2a
+cp %{_builddir}/kconfig-5.91.0/LICENSES/LGPL-2.1-only.txt %{buildroot}/usr/share/package-licenses/kconfig/3c3d7573e137d48253731c975ecf90d74cfa9efe
+cp %{_builddir}/kconfig-5.91.0/LICENSES/LGPL-3.0-only.txt %{buildroot}/usr/share/package-licenses/kconfig/757b86330df80f81143d5916b3e92b4bcb1b1890
+cp %{_builddir}/kconfig-5.91.0/LICENSES/LicenseRef-KDE-Accepted-LGPL.txt %{buildroot}/usr/share/package-licenses/kconfig/e458941548e0864907e654fa2e192844ae90fc32
+cp %{_builddir}/kconfig-5.91.0/LICENSES/LicenseRef-KDE-Accepted-LGPL.txt %{buildroot}/usr/share/package-licenses/kconfig/e458941548e0864907e654fa2e192844ae90fc32
+cp %{_builddir}/kconfig-5.91.0/LICENSES/MIT.txt %{buildroot}/usr/share/package-licenses/kconfig/a0193e3fccf86c17dc71e3f6c0ac0b535e06bea3
 pushd clr-build
 %make_install
 popd
@@ -229,6 +229,7 @@ popd
 
 %files dev
 %defattr(-,root,root,-)
+/usr/include/KF5/KConfig/kconfig_version.h
 /usr/include/KF5/KConfigCore/ConversionCheck
 /usr/include/KF5/KConfigCore/KAuthorized
 /usr/include/KF5/KConfigCore/KConfig
@@ -254,17 +255,18 @@ popd
 /usr/include/KF5/KConfigGui/KConfigLoader
 /usr/include/KF5/KConfigGui/KConfigSkeleton
 /usr/include/KF5/KConfigGui/KStandardShortcut
+/usr/include/KF5/KConfigGui/KStandardShortcutWatcher
 /usr/include/KF5/KConfigGui/KWindowConfig
 /usr/include/KF5/KConfigGui/kconfiggui.h
 /usr/include/KF5/KConfigGui/kconfiggui_export.h
 /usr/include/KF5/KConfigGui/kconfigloader.h
 /usr/include/KF5/KConfigGui/kconfigskeleton.h
 /usr/include/KF5/KConfigGui/kstandardshortcut.h
+/usr/include/KF5/KConfigGui/kstandardshortcutwatcher.h
 /usr/include/KF5/KConfigGui/kwindowconfig.h
 /usr/include/KF5/KConfigQml/KConfigPropertyMap
 /usr/include/KF5/KConfigQml/kconfigpropertymap.h
 /usr/include/KF5/KConfigQml/kconfigqml_export.h
-/usr/include/KF5/kconfig_version.h
 /usr/lib64/cmake/KF5Config/KF5ConfigCompilerTargets-relwithdebinfo.cmake
 /usr/lib64/cmake/KF5Config/KF5ConfigCompilerTargets.cmake
 /usr/lib64/cmake/KF5Config/KF5ConfigConfig.cmake
@@ -281,11 +283,11 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5ConfigCore.so.5
-/usr/lib64/libKF5ConfigCore.so.5.90.0
+/usr/lib64/libKF5ConfigCore.so.5.91.0
 /usr/lib64/libKF5ConfigGui.so.5
-/usr/lib64/libKF5ConfigGui.so.5.90.0
+/usr/lib64/libKF5ConfigGui.so.5.91.0
 /usr/lib64/libKF5ConfigQml.so.5
-/usr/lib64/libKF5ConfigQml.so.5.90.0
+/usr/lib64/libKF5ConfigQml.so.5.91.0
 
 %files license
 %defattr(0644,root,root,0755)
