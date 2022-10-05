@@ -6,7 +6,7 @@
 #
 Name     : kconfig
 Version  : 5.98.0
-Release  : 60
+Release  : 61
 URL      : https://download.kde.org/stable/frameworks/5.98/kconfig-5.98.0.tar.xz
 Source0  : https://download.kde.org/stable/frameworks/5.98/kconfig-5.98.0.tar.xz
 Source1  : https://download.kde.org/stable/frameworks/5.98/kconfig-5.98.0.tar.xz.sig
@@ -86,23 +86,23 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1662942720
+export SOURCE_DATE_EPOCH=1664936204
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto -fstack-protector-strong -fzero-call-used-regs=used "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto -fstack-protector-strong -fzero-call-used-regs=used "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto -fstack-protector-strong -fzero-call-used-regs=used "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto -fstack-protector-strong -fzero-call-used-regs=used "
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 %cmake ..
 make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1662942720
+export SOURCE_DATE_EPOCH=1664936204
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kconfig
 cp %{_builddir}/kconfig-%{version}/LICENSES/BSD-2-Clause.txt %{buildroot}/usr/share/package-licenses/kconfig/680ed9349d3d12bd39ddd36e8c4bc6b1b0cb1c0e || :
