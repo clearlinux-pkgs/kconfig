@@ -9,7 +9,7 @@
 #
 Name     : kconfig
 Version  : 6.7.0
-Release  : 97
+Release  : 98
 URL      : https://download.kde.org/stable/frameworks/6.7/kconfig-6.7.0.tar.xz
 Source0  : https://download.kde.org/stable/frameworks/6.7/kconfig-6.7.0.tar.xz
 Source1  : https://download.kde.org/stable/frameworks/6.7/kconfig-6.7.0.tar.xz.sig
